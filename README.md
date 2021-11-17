@@ -1,5 +1,5 @@
 # dik
-"Disable my Internal Keyboard" (dik) use evtest to grab your internal keyboard into test mode, thereby stops it from taking input. This is useful when you're running a Wayland laptop and want to place your keyboard on the internal one.
+"Disable my Internal Keyboard" (dik) uses evtest to grab your internal keyboard into test mode, thereby stopping it from taking input. This is useful when you're running a Wayland laptop and want to place your keyboard on the internal one.
 
 Tested on Fedora 35
 
@@ -18,6 +18,15 @@ Disable the internal keyboard.
 Re-enable the internal keyboard
 ```
 /path/to/dik --stop
+```
+
+## install
+```
+cp /path/to/dik /usr/bin
+```
+to uninstall
+```
+rm /usr/bin/dik
 ```
 
 ## Acknowledgement
