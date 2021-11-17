@@ -20,7 +20,7 @@ Re-enable the internal keyboard
 /path/to/dik --stop
 ```
 
-## install
+## Install
 ```
 cp /path/to/dik /usr/bin
 ```
