@@ -1,0 +1,14 @@
+#!/bin/sh
+if [ "$1" == "--stop" ] || [ "$1" == "-s" ]; then
+    echo Re-enabling the internal keyboard...
+    sudo killall evtest
+    exit 1
+fi
+
+if [ ! -f "/bin/evtest" ]; then
+    sudo dnf install evtest -y
+fi
+inpdir=$( echo $( sudo libinput list-devices | grep -A 1 AT\ Translated | grep Kernel ) )
+inpname=/${inpdir#*/}
+echo "Disabling $inpname..."
+sudo evtest --grab $inpname > /dev/null 2>&1 &
