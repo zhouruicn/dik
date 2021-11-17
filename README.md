@@ -23,6 +23,7 @@ Re-enable the internal keyboard
 ## Install
 ```
 cp /path/to/dik /usr/bin
+chmod +x /usr/bin/dik
 ```
 to uninstall
 ```
